@@ -5,7 +5,7 @@
   "author": ["Kyler08281, TJbuddy, EthanJ, TeddyD"],
   "description": "TestMod",
   "prefix": "dev",
-  "main_file": "dev.lua",
+  "main_file": "load.lua",
   "priority": 0,
   "badge_colour": "F4A6C7",
   "version": "1.0.0",

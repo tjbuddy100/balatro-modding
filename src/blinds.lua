@@ -23,14 +23,14 @@ SMODS.Blind {
             local kc = 0
 
             for _, card in pairs(context.scoring_hand) do
-                local id = card:get_id()
-                if id == "J" then
+                local id = card:get_rank()
+                if id == 'J' then
                     jc = jc + 1
                 end
-                if id == "Q" then
+                if id == 'Q' then
                     qc = qc + 1
                 end
-                if id == "K" then
+                if id == 'K' then
                     kc = kc + 1
                 end
             end
@@ -49,5 +49,35 @@ SMODS.Blind {
         end
         
 
+    end
+}
+
+-- The Ox
+SMODS.Blind {
+    key = "oxo",
+    dollars = 5,
+    mult = 2,
+    pos = { x = 0, y = 2 },
+    boss = { min = 1 },
+    boss_colour = HEX("b95b08"),
+    loc_vars = function(self)
+        return { vars = { localize(G.GAME.current_round.most_played_poker_hand, 'poker_hands') } }
+    end,
+    collection_loc_vars = function(self)
+        return { vars = { localize('ph_most_played') } }
+    end,
+    calculate = function(self, blind, context)
+        if not blind.disabled then
+            if context.debuff_hand then
+                blind.triggered = false
+                if context.scoring_name == G.GAME.current_round.most_played_poker_hand then
+                    blind.triggered = true
+                    if not context.check then
+                        ease_dollars(-G.GAME.dollars, true) -- `return {dollars = -G.GAME.dollars}` lacks the ability to set the amount instantly
+                        blind:wiggle()
+                    end
+                end
+            end
+        end
     end
 }

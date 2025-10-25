@@ -2,10 +2,17 @@ return {
     descriptions = {
         Back={},
         Blind={
-            champ = {
+            bl_dev_champ = {
                 name = "The Champ",
-                text = "test text",
-            }
+                text = {"test text"},
+            },
+            bl_dev_oxo = {
+                name = "The Ox",
+                text = {
+                    "Playing a #1#",
+                    "sets money to $0",
+                },
+            },
         },
         Edition={},
         Enhanced={},

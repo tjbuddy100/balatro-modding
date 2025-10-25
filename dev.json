@@ -1,0 +1,13 @@
+{
+  "id": "dev",
+  "name": "dev",
+  "display_name": "dev",
+  "author": ["Kyler08281, TJbuddy, EthanJ, TeddyD"],
+  "description": "TestMod",
+  "prefix": "dev",
+  "main_file": "dev.lua",
+  "priority": 0,
+  "badge_colour": "F4A6C7",
+  "version": "1.0.0",
+  "dependencies": ["Steamodded (>=1.0.0~BETA-0711a)"]
+}

@@ -4,10 +4,10 @@ return {
         Blind={
             bl_dev_champ = {
                 name = "The Champ",
-                text = {"test text"},
+                text = {"playing duplicate face cards results in debuff"},
             },
             bl_dev_oxo = {
-                name = "The Ox",
+                name = "The Ox but early",
                 text = {
                     "Playing a #1#",
                     "sets money to $0",

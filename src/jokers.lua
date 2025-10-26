@@ -47,16 +47,14 @@ SMODS.Joker {
     rarity = 1,
     blueprint_compat = true,
     cost = 2,
-    config = { extra = { x_mult = 5 }, },
+    config = { extra = { x_mult = 40} },
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.x_mult } }
+        return { vars = { card.ability.extra.x_mult} }
     end,
     calculate = function(self, card, context)
-		
         if context.joker_main then
-            return {
-                xmult = card.ability.extra.x_mult
-
+            return{
+                mult = mult ^ card.ability.extra.x_mult
             }
         end
     end

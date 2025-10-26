@@ -14,6 +14,8 @@ SMODS.Back {
     },
     apply = function(self)
         G.E_MANAGER:add_event(Event({
+            trigger = 'after',
+            delay = 0.2,
             func = function()
                 -- Make all cards rank 4
                 for _, card in ipairs(G.playing_cards) do

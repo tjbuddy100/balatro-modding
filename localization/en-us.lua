@@ -1,0 +1,47 @@
+return {
+    descriptions = {
+        Back={},
+        Blind={
+            bl_dev_champ = {
+                name = "The Champ",
+                text = {"test text"},
+            },
+            bl_dev_oxo = {
+                name = "The Ox",
+                text = {
+                    "Playing a #1#",
+                    "sets money to $0",
+                },
+            },
+        },
+        Edition={},
+        Enhanced={},
+        Joker={},
+        Other={},
+        Planet={},
+        Spectral={},
+        Stake={},
+        Tag={},
+        Tarot={},
+        Voucher={},
+    },
+    misc = {
+        achievement_descriptions={},
+        achievement_names={},
+        blind_states={},
+        challenge_names={},
+        collabs={},
+        dictionary={},
+        high_scores={},
+        labels={},
+        poker_hand_descriptions={},
+        poker_hands={},
+        quips={},
+        ranks={},
+        suits_plural={},
+        suits_singular={},
+        tutorial={},
+        v_dictionary={},
+        v_text={},
+    },
+}

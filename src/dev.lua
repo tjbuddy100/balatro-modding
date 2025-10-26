@@ -12,28 +12,14 @@ SMODS.Back {
             "and the {C:attention}Four{} Joker"
         },
     },
-		name = 'balls',
-		text = {
-			"no bitches?"
-		}
-	},
-    pos = { x = 0, y = 0 },
-    config = { discards = 1 },
-    loc_vars = function(self, info_queue, back)
-        return { vars = { self.config.discards } }
-    end,
     apply = function(self)
         G.E_MANAGER:add_event(Event({
             trigger = 'after',
             delay = 0.2,
             func = function()
                 -- Make all cards rank 4
-                if G.jokers then
-                    --everything is referenced as j_modname_jokerName, deck is d_modname_deckName
-                    local card = SMODS.create_card({set = "Joker", area = G.jokers, key = "j_dev_brut"})
-                    card:add_to_deck()
-                    card:start_materialize()
-                    G.jokers:emplace(card)
+                for _, card in ipairs(G.playing_cards) do
+                    assert(SMODS.change_base(card, nil, self.config.only_one_rank))
                 end
 
                 -- ✅ Spawn the Four Joker properly
@@ -47,7 +33,5 @@ SMODS.Back {
                 return true
             end
         }))
-    end,
-    
+    end
 }
-

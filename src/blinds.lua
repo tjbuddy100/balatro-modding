@@ -1,14 +1,11 @@
 -- custom blinds
 
---[[ The Champ: hands will only score if there is a clear "champ". 
-champ is the highest face card
-must be unique (cannot have another card of the same rank)
-duplicates of lower face cards are ok
+--[[ cannot play duplicate face cards
 ]]--
 SMODS.Blind {
     key = "champ",
-    dollars = "5";
-    mult = "2";
+    dollars = 8;
+    mult = 2;
 
 
     boss = {min = 1},
@@ -35,15 +32,9 @@ SMODS.Blind {
                 end
             end
 
-            if kc ~= 1 then
+           if jc > 1 or qc > 1 or kc > 1 then
                 return {debuff = true}
-            end
-            if qc ~= 1 then
-                return {debuff = true}
-            end
-            if jc ~= 1 then
-                return {debuff = true}
-            end
+           end
 
 
         end

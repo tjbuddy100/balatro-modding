@@ -14,8 +14,17 @@ if SMODS then
 end
 function SMODS.INIT.Colors()
 
+    local r = math.random(3)
     local balabubu = SMODS.findModByID("Balabubu")
-    local balabubu_balatro = SMODS.Sprite:new("balatro", balabubu.path, "balatro.png", 333, 216, "asset_atli")
+    local png_path = "" 
+    if(r == 1) then
+        png_path = "balatro.png"
+    elseif(r == 2) then
+        png_path = "buh.png"
+    else
+        png_path = "balala.png"
+    end
+    local balabubu_balatro = SMODS.Sprite:new("balatro", balabubu.path, png_path, 333, 216, "asset_atli")
     
     balabubu_balatro:register()
 

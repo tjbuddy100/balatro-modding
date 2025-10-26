@@ -10,4 +10,5 @@
   "badge_colour": "F4A6C7",
   "version": "1.0.0",
   "dependencies": ["Steamodded (>=1.0.0~BETA-1016c)"]
+  
 }

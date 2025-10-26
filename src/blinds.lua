@@ -12,7 +12,7 @@ SMODS.Blind {
 
 
     boss = {min = 1},
-    boss_colour = HEX("a33795"),
+    boss_colour = HEX('A33795'),
 
     calculate = function(self, blind, context)
         if not blind.disabled and context.scoring_hand and #context.scoring_hand > 0 then
@@ -23,7 +23,7 @@ SMODS.Blind {
             local kc = 0
 
             for _, card in pairs(context.scoring_hand) do
-                local id = card:get_rank()
+                local id = card.base.value
                 if id == 'J' then
                     jc = jc + 1
                 end

@@ -15,7 +15,7 @@ end
 function SMODS.INIT.Colors()
 
     local balabubu = SMODS.findModByID("Balabubu")
-    local balabubu_balatro = SMODS.Sprite:new("balatro", balabubu.path, "Balatro.png", 333, 216, "asset_atli")
+    local balabubu_balatro = SMODS.Sprite:new("balatro", balabubu.path, "balatro.png", 333, 216, "asset_atli")
     
     balabubu_balatro:register()
 

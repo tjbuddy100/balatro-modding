@@ -9,11 +9,15 @@ SMODS.Atlas {
     path = "four.png",
     px = 69, py = 93
 }
--- Wait for Steamodded to be fully ready
-sendDebugMessage("=== SMODS.INIT CHECK ===")
-sendDebugMessage("SMODS exists: " .. tostring(SMODS ~= nil))
-if SMODS then
-    sendDebugMessage("SMODS.INIT exists: " .. tostring(SMODS.INIT ~= nil))
-    sendDebugMessage("SMODS keys: " .. tostring(SMODS.INIT ~= nil))
-end
 
+SMODS.Atlas {
+    key = "brut", -- matches what you used above
+    path = "brutus.png",
+    px = 69, py = 93
+}
+
+SMODS.Atlas {
+    key = "oldBrut", -- matches what you used above
+    path = "oldBrutus.png",
+    px = 69, py = 93
+}

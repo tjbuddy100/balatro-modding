@@ -9,6 +9,8 @@ SMODS.Joker {
     cost = 5,
     blueprint_compat = true,
     perishable_compat = true,
+    blueprint_compat = true,
+    always_discovered = true,
     config = {},
 
     -- Joker description
@@ -29,4 +31,49 @@ SMODS.Joker {
         end
     end
 }
-print("✅ Registered Joker:", "j_" .. SMODS.current_mod.id .. "_ethan_four")
+SMODS.Joker {
+    key = "brut",
+    atlas = "brut",
+    name = "Brutus",
+	loc_txt = {
+		name = 'balls',
+		text = {
+			"no bitches?"
+		}
+	},
+    blueprint_compat = true,
+    always_discovered = true,
+    pos = { x = 0, y = 0 },
+    rarity = 1,
+    blueprint_compat = true,
+    cost = 2,
+    config = { extra = { x_mult = 5 }, },
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.x_mult } }
+    end,
+    calculate = function(self, card, context)
+		
+        if context.joker_main then
+            return {
+                xmult = card.ability.extra.x_mult
+
+            }
+        end
+    end
+}
+    SMODS.Joker {
+    key = "oldBrut",
+    atlas = "oldBrut",
+	loc_txt = {
+		name = 'Old Brutus',
+		text = {
+			"Oh no..."
+		}
+	},
+    pos = { x = 0, y = 0 },
+    rarity = 1,
+    blueprint_compat = true,
+    always_discovered = true,
+    cost = 2,
+    config = { extra = { x_mult = 2 }, },
+}

@@ -73,5 +73,14 @@ SMODS.Joker {
     blueprint_compat = true,
     always_discovered = true,
     cost = 2,
-    config = { extra = { x_mult = 2 }, },
+    config = { extra = {x_mult = 0}, },
+        -- Gameplay effect
+    calculate = function(self, card, context)
+        if context.joker_main then
+            return 
+            {xmult = card.ability.extra.x_mult,
+            message = "x" .. tostring(card.ability.extra/x_mult)
+            }
+        end
+    end
 }

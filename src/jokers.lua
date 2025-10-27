@@ -5,7 +5,7 @@ SMODS.Joker {
     name = "Four", -- display name
     atlas = "four", -- refers to your PNG atlas in /assets
     pos = {x = 0, y = 0}, -- location on sprite sheet (0,0 if single image)
-    rarity = 1, -- 1 = common, 2 = uncommon, 3 = rare
+    rarity = 3, -- 1 = common, 2 = uncommon, 3 = rare
     cost = 5,
     blueprint_compat = true,
     perishable_compat = true,
@@ -38,7 +38,7 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'balls',
 		text = {
-			"no bitches?"
+			"no bitches???"
 		}
 	},
     blueprint_compat = true,
@@ -69,7 +69,7 @@ SMODS.Joker {
 		}
 	},
     pos = { x = 0, y = 0 },
-    rarity = 1,
+    rarity = 4,
     blueprint_compat = true,
     always_discovered = true,
     cost = 2,
@@ -83,4 +83,25 @@ SMODS.Joker {
             }
         end
     end
+}
+
+    SMODS.Joker {
+    key = "labubu1", -- unique internal ID
+    name = "Labubu", -- display name
+    atlas = "labubu1", -- refers to your PNG atlas in /assets
+    pos = {x = 0, y = 0}, -- location on sprite sheet (0,0 if single image)
+    rarity = 1, -- 1 = common, 2 = uncommon, 3 = rare
+    cost = 5,
+    blueprint_compat = true,
+    perishable_compat = true,
+    always_discovered = true,
+    config = {},
+
+    -- Joker description
+    loc_txt = {
+        name = "Labubu",
+        text = {
+            "It is rumored that if you collect 5 Labubus, you will gain infinite power..."
+            }
+    },
 }

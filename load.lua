@@ -22,3 +22,23 @@ SMODS.Atlas {
     path = "oldBrutus.png",
     px = 69, py = 93
 }
+
+SMODS.Atlas {
+    key = "labubu1", -- matches what you used above
+    path = "labubu1.png",
+    px = 69, py = 93
+}
+
+SMODS.Atlas({
+    key = "fours", -- matches what you used above
+    path = "fours.png",
+    px = 71, 
+    py = 95,
+})
+
+SMODS.Atlas({
+    key = "doom", -- matches what you used above
+    path = "doom.png",
+    px = 71, 
+    py = 95,
+})

@@ -36,9 +36,9 @@ SMODS.Joker {
     atlas = "brut",
     name = "Brutus",
 	loc_txt = {
-		name = 'balls',
+		name = 'Brutus',
 		text = {
-			"no bitches???"
+			"no overflow?"
 		}
 	},
     blueprint_compat = true,
